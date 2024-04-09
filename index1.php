@@ -1,27 +1,22 @@
-<?php
-$alunos = isset($_POST['alunos']) ? $_POST['alunos'] : array();
-$maior_nota = 0;
-$aluno_maior_nota = '';
-$total_notas = 0;
-$num_alunos = 0; 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+</head>
+<body>
+    <form action="exercicio1.php" method="post">
+        <?php
+            for ($i=0; $i<10; $i++){
+                echo '<input type="text" name="alunos['.$i.'][nome]" placeholder="Nome do Aluno '.$i.'">';
+                echo '<input type="number" name="alunos['.$i.'][nota]" placeholder="Nota do Aluno '.$i.'">';
+                echo '<br>';
+            }
+        ?>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
 
-foreach ($alunos as $aluno) {
-    $nota = $aluno['nota'];
-    $total_notas += $nota;
-    $num_alunos++; 
-    if ($nota > $maior_nota) {
-        $maior_nota = $nota;
-        $aluno_maior_nota = $aluno['nome'];
-    }
-}
-
-if ($num_alunos > 0) {
-    $media = $total_notas / $num_alunos; 
-    echo "Média da classe: " . $media . "<br>";
-} else {
-    echo "Não há alunos para calcular a média<br>";
-}
-
-echo "Aluno com a maior nota: " . $aluno_maior_nota . " (" . $maior_nota . ")";
-?>
 
