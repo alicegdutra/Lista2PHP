@@ -9,12 +9,11 @@
     <form action="exercicio3.php" method="post">
         <?php
             for ($i=0; $i<10; $i++){
-                echo '<input type="number" name="valor['.$i.'][valor]" placeholder="Insira um número: '.$i.'">';
+                echo '<input type="number" name="numeros[]" placeholder="Insira um número: '.$i.'">';
             }
         ?>
         <label>Informe o número que multiplicará os números indicados anteriormente: </label>
         <input type="number" name="valor">
-        <button type="submit">Enviar</button>
         <button type="submit">Enviar</button>
     </form>
 </body>
