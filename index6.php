@@ -14,8 +14,7 @@
                 echo '<br>';
             }
         ?>
-        ?>
-        <button type="submit">Enviar</button>
+        <button type="submit" name="submit">Enviar</button>
     </form>
 </body>
 </html>
