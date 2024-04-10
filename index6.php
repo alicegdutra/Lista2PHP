@@ -9,10 +9,11 @@
     <form action="exercicio6.php" method="post">
         <?php
             for ($i=0; $i<5; $i++){
-                echo '<input type="text" name="produtos['.$i.'][produtos]" placeholder="Nome do Produto: ">';
-                echo '<input type="number" name="preco['.$i.'][preco]" placeholder="Preço do produto: ">';
+                echo '<input type="text" name="produtos['.$i.'][nome]" placeholder="Nome do Produto: ">';
+                echo '<input type="number" name="produtos['.$i.'][preco]" placeholder="Preço do produto R$: ">';
                 echo '<br>';
             }
+        ?>
         ?>
         <button type="submit">Enviar</button>
     </form>
